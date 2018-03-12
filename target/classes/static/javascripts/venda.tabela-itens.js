@@ -16,12 +16,10 @@ Brewer.TabelaItens = (function() {
 			method: "POST",
 			data: {
 				codigoCerveja: item.codigo
+	
 			}
 		});
 		
-		resposta.done(function(data){
-			console.log('retorno', data);
-		});
 		resposta.done(onItemAdicionadoNoServidor.bind(this));
 	}
 	
@@ -40,5 +38,5 @@ $(function() {
 	
 	var tabelaItens = new Brewer.TabelaItens(autocomplete);
 	tabelaItens.iniciar();
-	
 });
+	

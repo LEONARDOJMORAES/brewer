@@ -40,7 +40,10 @@ Brewer.Autocomplete = (function() {
 					console.log('selecionou um item')
 					console.log(' item-selecionado', this.skuOuNomeInput.getSelectedItemData());
 					this.emitter.trigger('item-selecionado', this.skuOuNomeInput.getSelectedItemData());
+					this.skuOuNomeInput.val('');
+					this.skuOuNomeInput.focus();
 				}.bind(this)
+				
 			}
 		};
 		this.skuOuNomeInput.easyAutocomplete(options);
